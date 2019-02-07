@@ -8,8 +8,8 @@ namespace TravelWay
 {
     public enum AirTicketClasses
     {
-        Youth,
-        Business,
-        Economy,
+        Youth, // Детский.
+        Business, // Бизнесс.
+        Economy, // Эконом.
     }
 }

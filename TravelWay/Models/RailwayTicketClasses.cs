@@ -8,9 +8,9 @@ namespace TravelWay
 {
     public enum RailwayTicketClasses
     {
-        Common,
-        Sitting,
-        Luxe,
-        Compartment
+        Common, // Плацкарт.
+        Sitting, // Сидячее место.
+        Luxe, // Люкс.
+        Compartment // Купе.
     }
 }

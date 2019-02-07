@@ -10,7 +10,7 @@ namespace TravelWay
     {
         public List<ITicket> FullWay { get; set; }
 
-        public int GetFullTimeInWay()
+        public int GetFullTimeInWay() // Расчет полного времени в пути.
         {
             int fullTime = 0;
             foreach(ITicket trip in FullWay)
@@ -20,7 +20,7 @@ namespace TravelWay
             return fullTime;
         }
 
-        public int GetFullCost()
+        public int GetFullCost() // Расчет полной стоимости. 
         {
             int fullCost = 0;
             foreach (ITicket trip in FullWay)
