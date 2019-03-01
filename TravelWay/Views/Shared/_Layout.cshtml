@@ -5,16 +5,19 @@
 <head>
     <meta charset="utf-8" />
     <title>Travel Way</title>
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css"/>
 </head>
-    <body>
-        <div id="Header">
-            <h3>Travel Way</h3>
-        </div>
+<body>
 
-        <div id="Body">
-            
-            @RenderBody()
+    <div id="Header">
 
-        </div>
-    </body>
+    </div>
+    <img id="logo" src="@Url.Content("~/Content/images/logo.png")" />
+    @for (int i = 0; i < 100; i++)
+    {
+        <h1>q</h1>
+    }
+    @RenderBody()
+
+</body>
 </html>
