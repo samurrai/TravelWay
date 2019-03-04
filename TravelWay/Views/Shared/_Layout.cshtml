@@ -5,19 +5,50 @@
 <head>
     <meta charset="utf-8" />
     <title>Travel Way</title>
-    <link href="/Content/Site.css" rel="stylesheet" type="text/css"/>
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body id="Background">
 
-    <div id="Header">
+    <div id="Image">
+        <form action="" method="GET" id="Form-getting-direction">
+            <fieldset id="Getting-direction" >
+                <label for="OutCity">Введите город отбытия:</label>
+                <input type="text" name="OutCity" id="OutCity" placeholder="Астана" />
+                <hr color="white" />
+                <label for="InCity">Введите город прибытия:</label>
+                <input type="text" name="InCity" id="InCity" placeholder="Алматы" />
+                <hr color="white" />
+                <input type="button" name="Button" id="Button" value="Найти" />            
+            </fieldset>
 
+        </form>
     </div>
-    <img id="logo" src="@Url.Content("~/Content/images/logo.png")" />
-    @for (int i = 0; i < 100; i++)
-    {
-        <h1>q</h1>
-    }
+
     @RenderBody()
+
+  
+
+    <div id="Info">
+        <table>
+            @for (int i = 0; i < 3; i++)
+            {
+                <tr>
+                    <td><h3>Some info</h3></td>
+                    <td><h3>Some info</h3></td>
+                    <td><h3>Some info</h3></td>
+                </tr>
+            }
+        </table>
+    </div>
 
 </body>
 </html>
+
+<!--<table id="Table-get-direction">
+           <tr>
+               <td><input value="Астана" type="text" /></td>
+               <td>Город прибытия: </td>
+               <td><input value="Алматы" type="text" /></td>
+               <td><input class="Button" id="Botton-finder" value="Проложить путь" type="button" /></td>
+           </tr>
+       </table>-->

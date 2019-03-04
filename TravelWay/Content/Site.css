@@ -1,29 +1,51 @@
-﻿
-
-#Header {
-    z-index:1;
-    position:absolute;
-    background-color: #00E6BC;
-    padding-top: 150px;
-    position:fixed;
-    width: 100%;
-    left: 0;
-    top: 0; 
-
+﻿#Background{
+  
+    z-index: 1;
 }
 
-#logo {
+#Image {
+    z-index: 2;
     position: absolute;
-    z-index: 4;
-    width: 220px;
-    position: center;
-    left: 20%;
-    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80%;
+    background-image: url(/Content/images/TravelPhoto.jpg);
+    background-size: cover;
+    background-clip: border-box;
+    background-attachment: fixed;
 }
 
+#Getting-direction {
+    z-index: 5;
+    width: 50%;
+    margin: 200px auto;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 19px;
+    border-width: 0;
+    text-align: center;
+}
 
+#Button {
+    background-color: white;
+    border-width: 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    width: 85px;
+    height: 30px;
+    line-height: 20px;
+    font-family: Arial, sans-serif;
+}
+ 
 
-h3 #Header{
-    font-style:inherit;
-    color:black;
-}   
+#Info{
+    position:absolute;
+    position:page;
+    bottom: 100;
+    left: 0;
+    right: 0;
+    background-color: #808080;
+}

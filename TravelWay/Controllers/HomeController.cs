@@ -12,7 +12,7 @@ namespace TravelWay.Controllers
         {
             return View();
         }
-
+        
       
     }
 }
