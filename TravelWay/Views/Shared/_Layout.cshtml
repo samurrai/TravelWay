@@ -8,7 +8,7 @@
     <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="Background">
-
+    <img src="~/Content/images/logo.png" id="logo"/>
     <div id="Image">
         <form action="" method="GET" id="Form-getting-direction">
             <fieldset id="Getting-direction" >
@@ -26,29 +26,18 @@
 
     @RenderBody()
 
-  
 
-    <div id="Info">
+    <footer id="Footer">
         <table>
-            @for (int i = 0; i < 3; i++)
-            {
-                <tr>
-                    <td><h3>Some info</h3></td>
-                    <td><h3>Some info</h3></td>
-                    <td><h3>Some info</h3></td>
-                </tr>
-            }
+           @for (int i = 0; i < 2; i++)
+           {
+            <tr>
+                <td><h3>Some info</h3></td>
+            </tr>
+           }
         </table>
-    </div>
+    </footer>
 
 </body>
 </html>
 
-<!--<table id="Table-get-direction">
-           <tr>
-               <td><input value="Астана" type="text" /></td>
-               <td>Город прибытия: </td>
-               <td><input value="Алматы" type="text" /></td>
-               <td><input class="Button" id="Botton-finder" value="Проложить путь" type="button" /></td>
-           </tr>
-       </table>-->
