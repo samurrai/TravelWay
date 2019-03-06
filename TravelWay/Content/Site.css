@@ -1,5 +1,5 @@
-﻿#Background{
-  
+﻿#Background {
+
     z-index: 1;
 }
 
@@ -24,6 +24,10 @@
     background-size: cover;
     background-clip: border-box;
     background-attachment: fixed;
+}
+
+#renderBody{
+margin-top:40%;
 }
 
 #Getting-direction {
@@ -56,12 +60,24 @@
 }
 
 #Footer {
+    background-color: #0E0E0E;
     z-index: 3;
     position: absolute;
     left: 0;
-    bottom: 0;
     width: 100%;
-    background: #0E0E0E;
     color: white;
+  
+}
 
+#footer-logo {
+    margin-left: 50px;
+    width: 50px;
+}
+
+#footer-text-logo {
+    margin-left: 50px;
+}
+
+#About-us-head {
+    color: red;
 }

@@ -6,36 +6,35 @@
     <meta charset="utf-8" />
     <title>Travel Way</title>
     <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body id="Background">
-    <img src="~/Content/images/logo.png" id="logo"/>
+
+    <img src="~/Content/images/logo.png" id="logo" />
     <div id="Image">
         <form action="" method="GET" id="Form-getting-direction">
-            <fieldset id="Getting-direction" >
-                <label for="OutCity">Введите город отбытия:</label>
-                <input type="text" name="OutCity" id="OutCity" placeholder="Астана" />
+            <fieldset id="Getting-direction">
+                <label for="From">Введите город отбытия:</label>
+                <input type="text" name="From" id="OutCity" placeholder="Астана" />
                 <hr color="white" />
-                <label for="InCity">Введите город прибытия:</label>
-                <input type="text" name="InCity" id="InCity" placeholder="Алматы" />
+                <label for="To">Введите город прибытия:</label>
+                <input type="text" name="To" id="InCity" placeholder="Алматы" />
                 <hr color="white" />
-                <input type="button" name="Button" id="Button" value="Найти" />            
+                <label for="DepatureDate">Дата отбытия:</label>
+                <input type="date" name="DepatureDate" value="2019-03-06" min=@DateTime.UtcNow/>
+                <hr color="white" />
+                <input type="button" name="Button" id="Button" value="Найти" />
             </fieldset>
 
         </form>
     </div>
-
-    @RenderBody()
-
-
+    <div id="renderBody">
+        @RenderBody()
+    </div>
+  
     <footer id="Footer">
-        <table>
-           @for (int i = 0; i < 2; i++)
-           {
-            <tr>
-                <td><h3>Some info</h3></td>
-            </tr>
-           }
-        </table>
+        <img src="~/Content/images/logo.png" id="footer-logo" alt=""/>
+        <p id="footer-text-logo">TravelWay corporation. All rights reserved</p>
     </footer>
 
 </body>
