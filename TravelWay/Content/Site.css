@@ -1,12 +1,42 @@
-﻿#Background {
+﻿
+* {
+    margin: 0;
+    padding: 0;
+}
 
+
+body {
+    height: 100%;
     z-index: 1;
 }
+
+wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+content {
+    flex: 1 0 auto;
+    
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    background-color: #0E0E0E;
+    border-style: solid;
+    border-color: black;
+    display: block;
+}
+
+
 
 
 #logo {
     z-index: 3;
-    position: relative;
+   
     left: 5px;
     top: 5px;
     width: 100px;
@@ -15,7 +45,7 @@
 
 #Image {
     z-index: 2;
-    position: absolute;
+  
     left: 0;
     right: 0;
     top: 0;
@@ -27,7 +57,7 @@
 }
 
 #renderBody{
-margin-top:40%;
+
 }
 
 #Getting-direction {
@@ -59,14 +89,11 @@ margin-top:40%;
     color: white;
 }
 
-#Footer {
-    background-color: #0E0E0E;
-    z-index: 3;
-    position: absolute;
-    left: 0;
-    width: 100%;
+
+.container {
+    margin-left: 50px;
+    width: 50px;
     color: white;
-  
 }
 
 #footer-logo {
@@ -74,10 +101,12 @@ margin-top:40%;
     width: 50px;
 }
 
-#footer-text-logo {
-    margin-left: 50px;
+#footer-text-logo{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
 }
 
+
 #About-us-head {
-    color: red;
+    color: black;
 }
