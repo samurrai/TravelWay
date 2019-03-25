@@ -8,8 +8,8 @@ namespace TravelWay
 {
     public class Searcher
     {
-        string From { get; set; } // Место отправки.
-        string To { get; set; } // Место прибытия.
-        DateTime DepartureDate { get; set; } // Дата отбытия.
+        public string From { get; set; } // Место отправки.
+        public string To { get; set; } // Место прибытия.
+        public DateTime DepartureDate { get; set; } // Дата отбытия.
     }
 }

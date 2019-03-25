@@ -11,27 +11,6 @@
 </head>
 <body>
     <wrapper>
-        <header>
-
-            <div id="Image">
-                <img src="~/Content/images/logo.png" id="logo" />
-                <form action="" method="GET" id="Form-getting-direction">
-                    <fieldset id="Getting-direction">
-                        <label for="From">Введите город отбытия:</label>
-                        <input type="text" name="From" id="OutCity" placeholder="Астана" />
-                        <hr color="white" />
-                        <label for="To">Введите город прибытия:</label>
-                        <input type="text" name="To" id="InCity" placeholder="Алматы" />
-                        <hr color="white" />
-                        <label for="DepatureDate">Дата отбытия:</label>
-                        <input type="date" name="DepatureDate" value="2019-03-06" min=@DateTime.UtcNow />
-                        <hr color="white" />
-                        <input type="button" name="Button" id="Button" value="Найти" />
-                    </fieldset>
-
-                </form>
-            </div>
-        </header>
         <content>
             @RenderBody()
         </content>

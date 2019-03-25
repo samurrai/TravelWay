@@ -84,9 +84,9 @@ content {
     font-family: Arial, sans-serif;
 }
 
-#Button:hover {
+button:hover {
     background-color: #f2e3ae;
-    color: white;
+    color: black;
 }
 
 
