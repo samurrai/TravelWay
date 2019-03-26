@@ -10,18 +10,18 @@
 
         <div id="Image">
             <img src="~/Content/images/logo.png" id="logo" />
-            <form action="" method="GET" id="Form-getting-direction">
+            <form action="/Home/Routes/" method="post" id="Form-getting-direction">
                 <fieldset id="Getting-direction">
                     <label for="From">Введите город отбытия:</label>
-                    <input type="text" name="from" id="OutCity" placeholder="Астана" />
+                    <input type="text" name="From" id="OutCity" placeholder="Астана" />
                     <hr color="white" />
                     <label for="To">Введите город прибытия:</label>
-                    <input type="text" name="to" id="InCity" placeholder="Алматы" />
+                    <input type="text" name="To" id="InCity" placeholder="Алматы" />
                     <hr color="white" />
                     <label for="DepatureDate">Дата отбытия:</label>
-                    <input type="date" name="depatureDate" value="2019-03-06" min=@DateTime.UtcNow />
+                    <input type="date" name="DepartureDate" />
                     <hr color="white" />
-                    <input type="button" name="Button" id="Button" value="Найти" href="/Home/Routes/" />
+                    <input type="submit" id="Button" value="Найти" />
                 </fieldset>
 
             </form>
