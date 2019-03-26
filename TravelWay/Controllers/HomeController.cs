@@ -19,7 +19,6 @@ namespace TravelWay.Controllers
         public ActionResult Routes(Searcher searcher)
         {
             ViewBag.Searcher = searcher;
-            
             return View();
         }
     }

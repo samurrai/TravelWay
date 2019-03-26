@@ -3,11 +3,13 @@
     Layout = "/Views/Shared/_Layout.cshtml";
 }
 
-<header>
-    <h2>Routes</h2>
-    <p>From @ViewBag.Searcher.From</p>
-    <p>To @ViewBag.Searcher.To</p>
-    <p>Date @ViewBag.Searcher.DepartureDate</p>
+<header id="routes-header">
+    <a href="/Home/Index"><img src="~/Content/images/logo.png" id="logo-routes" /></a>
+        <fieldset id="routes-fieldset">
+            <label><b><a href="/Home/Index">На главную. ||</a></b> Город отправления: <b>@ViewBag.Searcher.From</b> || Город прибытия: <b>@ViewBag.Searcher.To</b></label>
+            <br />
+            <label>Дата отправки: <b>@ViewBag.Searcher.DepartureDate.Date</b></label>
+        </fieldset>
 </header>
 <content>
 
