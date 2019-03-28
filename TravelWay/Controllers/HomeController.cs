@@ -11,15 +11,24 @@ namespace TravelWay.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.DateNow = DateTime.Now;
+
             return View();
         }
 
         [HttpPost]
         public ActionResult Routes(Searcher searcher)
         {
-            ViewBag.Searcher = searcher;
-            return View();
+            var date = DateTime.Now;
+            
+            if (searcher.From is null || searcher.To is null || searcher.DepartureDate.Date < date.Date)
+            {
+                return View("/Views/Home/Index.cshtml");
+            }
+            else
+            {
+                ViewBag.Searcher = searcher;
+                return View();
+            }
         }
     }
 }
