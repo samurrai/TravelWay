@@ -21,8 +21,8 @@ content {
     
 }
 
-#footer {
-    position: absolute;
+#Footer {
+    position: relative;
     bottom: 0;
     height: 40px;
     background-color: #0E0E0E;
@@ -30,6 +30,8 @@ content {
     border-color: black;
     display: block;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 #logo {
@@ -143,4 +145,15 @@ button:hover {
 a {
     color: white;
     text-decoration: none;
+}
+
+#dub {
+    position:relative;
+    margin: 0;
+    padding: 0;
+    height:50px;
+}
+
+p{
+
 }
