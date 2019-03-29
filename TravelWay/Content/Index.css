@@ -51,8 +51,6 @@ footer {
     background-attachment: fixed;
 }
 
-#renderBody {
-}
 
 #Getting-direction {
     z-index: 5;
@@ -109,7 +107,10 @@ button:hover {
 
 #dub {
     position: relative;
-    margin: 0;
-    padding: 0;
     height: 50px;
+}
+
+#Top{
+    border:solid, black;
+
 }

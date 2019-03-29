@@ -15,9 +15,9 @@
     <header id="routes-header">
         <a href="/Home/Index"><img src="~/Content/images/logo.png" id="logo-routes" /></a>
         <fieldset id="routes-fieldset">
-            <label><b><a href="/Home/Index">На главную. ||</a></b> Город отправления: <b>@ViewBag.Searcher.From</b> || Город прибытия: <b>@ViewBag.Searcher.To</b></label>
+            <label><b><a href="/Home/Index">На главную. ||</a></b> Город отправления: <b>@ViewBag.SearcherOriginal.From</b> || Город прибытия: <b>@ViewBag.SearcherOriginal.To</b></label>
             <br />
-            <label>Дата отправки: <b>@ViewBag.Searcher.DepartureDate.Date</b></label>
+            <label>Дата отправки: <b>@ViewBag.SearcherOriginal.DepartureDate.Date</b></label>
         </fieldset>
     </header>
     <div style="height:100px;"></div>
@@ -36,8 +36,14 @@
         }
         else
         {
-            // Тут должен быть foreach!
-            <div class="WayInfo"></div>
+            // cost URL StartTime  AirCompany 
+            foreach (var ticket in ViewBag.Tickets)
+            {
+                <div class="WayInfo">
+                    <p> Из @ViewBag.SearcherOriginal.From. В @ViewBag.SearcherOriginal.To. </p>
+                </div>    
+            }
+            
         }
 
 
