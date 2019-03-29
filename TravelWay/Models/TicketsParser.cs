@@ -15,7 +15,6 @@ namespace TravelWay
         private WebClient webClient;
         public string Path { get; set; }
         public string Html { get; set; }
-
         public TicketsParser(string path)
         {
             webClient = new WebClient();
@@ -23,29 +22,40 @@ namespace TravelWay
             Html = webClient.DownloadString(path);
         }
 
-        internal List<AirTicket> GetTickets()
-        {   
-            HtmlParser parser = new HtmlParser();
-            var doc = parser.ParseDocument(Html);
-
-            var prices = doc.GetElementsByClassName("price");
-            var airCompanies = doc.GetElementsByClassName("airlineColor_KC air_KC_");
-            var URL = Path;
-            var time = doc.QuerySelectorAll("div.dt-left > div.time");
-
-            List<AirTicket> tickets = new List<AirTicket>();
-            for (int i = 0; i < prices.Count(); i++)
+        public List<AirTicket> GetTickets()
+        {
+            try
             {
-                tickets.Add(new AirTicket
+                HtmlParser parser = new HtmlParser();
+
+                var document = parser.ParseDocument(Html);
+
+                var prices = document.GetElementsByClassName("price");
+                var airCompanies = document.GetElementsByClassName("airlineColor_KC air_KC_");
+                var URL = Path;
+                var time = document.QuerySelectorAll("div.dt-left > div.time");
+
+                List<AirTicket> tickets = new List<AirTicket>();
+                for (int i = 0; i < prices.Count(); i++)
                 {
-                    Cost = prices[i].TextContent.Trim().Substring(0, prices[i].TextContent.Trim().Length - 8),
-                    AirCompany = airCompanies[i].TextContent.Trim(),
-                    SourceSiteURL = URL.Trim(),
-                    Time = time[i].TextContent.Trim(),
-                });
+                    tickets.Add(new AirTicket
+                    {
+                        Cost = prices[i].TextContent.Trim().Substring(0, prices[i].TextContent.Trim().Length - 8),
+                        AirCompany = airCompanies[i].TextContent.Trim(),
+                        SourceSiteURL = URL.Trim(),
+                        Time = time[i].TextContent.Trim(),
+                    });
+                }
+                return tickets;
             }
-            return tickets;
+            catch (Exception)
+            {
+                return new List<AirTicket>();
+            }
+  
         }
+
+     
     }
 }
 
