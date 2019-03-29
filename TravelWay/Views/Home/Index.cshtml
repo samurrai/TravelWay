@@ -1,61 +1,85 @@
 ﻿@{
-    Layout = "/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
 
 
+<!DOCTYPE html>
 
-<div>
+<html>
 
-    <header>
-        <div id="Image">
-            <img src="~/Content/images/logo.png" id="logo" />
-            <form action="/Home/Routes/" method="post" id="Form-getting-direction">
-                <fieldset id="Getting-direction">
-                    <label for="From">Введите город отбытия:</label>
-                    <input type="text" name="From" id="OutCity" placeholder="Нур-Султан" />
-                    <hr color="white" />
-                    <label for="To">Введите город прибытия:</label>
-                    <input type="text" name="To" id="InCity" placeholder="Алматы" />
-                    <hr color="white" />
-                    <label for="DepatureDate">Дата отбытия:</label>
-                    <input type="date" name="DepartureDate" />
-                    <hr color="white" />
-                    <input type="submit" id="Button" value="Найти" />
-                </fieldset>
 
-            </form>
+<head>
+    <meta charset="utf-8" />
+    <title>Travel Way</title>
+    <link rel="shortcut icon" href="~/Content/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="~/Content/Index.css" />
+</head>
+<body style="background-color: #fffcf2;">
+    <wrapper>
+        <div>
+
+            <header>
+                <div id="Image">
+                    <img src="~/Content/images/logo.png" id="logo" />
+                    <form action="/Home/Routes/" method="post" id="Form-getting-direction">
+                        <fieldset id="Getting-direction">
+                            <label for="From">Введите город отбытия:</label>
+                            <input type="text" name="From" id="OutCity" placeholder="Нур-Султан" />
+                            <hr color="white" />
+                            <label for="To">Введите город прибытия:</label>
+                            <input type="text" name="To" id="InCity" placeholder="Алматы" />
+                            <hr color="white" />
+                            <label for="DepatureDate">Дата отбытия:</label>
+                            <input type="date" name="DepartureDate" />
+                            <hr color="white" />
+                            <input type="submit" id="Button" value="Найти" />
+                        </fieldset>
+
+                    </form>
+                </div>
+            </header>
+            <br />
+            <h1 id="About-us-head" style="margin-left: 50%; font-style:oblique; font-family:'Buxton Sketch' ">О нас:</h1>
+
+            <hr color="black" />
+            <div id="info-block" class="info-block" style=" font-size: 20px; font-family:'Buxton Sketch'; font-style:italic;">
+                <div id="about-us" class="info-block" style="margin-left: 0%; width: 50%; ">
+
+                    <p> Крупнейший поисковик авиабилетов в Казахстане.</p>
+                    <p>Мы сравниваем все доступные варианты перелётов по вашему запросу,</p>
+                    <p>а потом направляем вас для покупки на </p>
+                    <p>сайты авиакомпаний и агентств.</p>
+
+                </div>
+
+
+                <div id="advantages" class="info-block" style=" margin-left: 65%; ">
+                    <p>
+                        Чтобы не открывать десятки разных сайтов,
+                        не путаться во вкладках и не сравнивать цены вручную.
+                        Всё это мы уже сделали за вас. А еще добавили эксклюзивные акции,
+                        удобные фильтры для поиска и скидки от авиа­компаний.
+                        Опытные путешественники пользуются Travel way поэтому поиск билета
+                        у них занимает менее 30 секунд. А у вас?
+                    </p>
+                </div>
+            </div>
+
+            <hr color="black" />
+
         </div>
-    </header>
-    <br />
-    <h1 id="About-us-head" style="margin-left: 50%; font-style:oblique; font-family:'Buxton Sketch' ">О нас:</h1>
+        <br />
+        <br />
+        <div id="dub" />
+        <footer>
+            <img src="~/Content/images/logo.png" id="footer-logo" alt="" />
+            <p id="footer-text-logo">TravelWay corporation. All rights reserved</p>
+        </footer>
+    </wrapper>
+</body>
+</html>
 
-    <hr color="black" />
-    <div id="info-block" class="info-block" style=" font-size: 20px; font-family:'Buxton Sketch'; font-style:italic;">
-        <div id="about-us" class="info-block" style="margin-left: 0%; width: 50%; ">
-
-            <p> Крупнейший поисковик авиабилетов в Казахстане.</p>
-            <p>Мы сравниваем все доступные варианты перелётов по вашему запросу,</p>
-            <p>а потом направляем вас для покупки на </p>
-            <p>сайты авиакомпаний и агентств.</p>
-
-        </div>
-
-
-        <div id="advantages" class="info-block" style=" margin-left: 65%; ">
-            <p>
-                Чтобы не открывать десятки разных сайтов,
-                не путаться во вкладках и не сравнивать цены вручную.
-                Всё это мы уже сделали за вас. А еще добавили эксклюзивные акции,
-                удобные фильтры для поиска и скидки от авиа­компаний.
-                Опытные путешественники пользуются Travel way поэтому поиск билета
-                у них занимает менее 30 секунд. А у вас?
-            </p>
-        </div>
-    </div>
-
-    <hr color="black" />
-    
-</div>
 
 
 

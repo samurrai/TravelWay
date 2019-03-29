@@ -18,24 +18,21 @@ wrapper {
 
 content {
     flex: 1 0 auto;
-    
 }
 
-#Footer {
+footer {
     position: relative;
     bottom: 0;
-    height: 40px;
+    
     background-color: #0E0E0E;
     border-style: solid;
     border-color: black;
     display: block;
     color: white;
-    margin: 0;
-    padding: 0;
 }
 
 #logo {
-    z-index: 3; 
+    z-index: 3;
     left: 5px;
     top: 5px;
     width: 100px;
@@ -44,7 +41,6 @@ content {
 
 #Image {
     z-index: 2;
-  
     left: 0;
     right: 0;
     top: 0;
@@ -55,8 +51,7 @@ content {
     background-attachment: fixed;
 }
 
-#renderBody{
-
+#renderBody {
 }
 
 #Getting-direction {
@@ -100,9 +95,9 @@ button:hover {
     width: 50px;
 }
 
-#footer-text-logo{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: red;
+#footer-text-logo {
+    font-family:'Times New Roman', Times, serif ;
+    
 }
 
 
@@ -113,8 +108,8 @@ button:hover {
 
 
 #dub {
-    position:relative;
+    position: relative;
     margin: 0;
     padding: 0;
-    height:50px;
+    height: 50px;
 }

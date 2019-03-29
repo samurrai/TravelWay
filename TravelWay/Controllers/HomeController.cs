@@ -18,6 +18,7 @@ namespace TravelWay.Controllers
         [HttpPost]
         public ActionResult Routes(Searcher searcher)
         {
+            ViewBag.isFound = false;
             var date = DateTime.Now;
             
             if (searcher.From is null || searcher.To is null || searcher.DepartureDate.Date < date.Date)
