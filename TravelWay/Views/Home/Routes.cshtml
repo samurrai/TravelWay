@@ -23,12 +23,11 @@
     <div style="height:100px;"></div>
     <content>
 
-
         <br />
         @if (!ViewBag.isFound)
         {
             <h3>Маршруты по Вашему запросу не найдены!</h3>
-            
+            // 
             for (int i = 0; i < 30; i++)
             {
                 <br />
@@ -40,7 +39,9 @@
             foreach (var ticket in ViewBag.Tickets)
             {
                 <div class="WayInfo">
-                    <p> Из @ViewBag.SearcherOriginal.From. В @ViewBag.SearcherOriginal.To. </p>
+                    <p> Из @ViewBag.SearcherOriginal.From В @ViewBag.SearcherOriginal.To 
+                           @ViewBag.Tickets.Cost @ViewBag.Tickets.AirCompany 
+                           @ViewBag.Tickets.StartTime <a href="@ViewBag.Tickets.Url">источник</a>></p>
                 </div>    
             }
             
@@ -49,7 +50,7 @@
 
 
     </content>
-
+    app -> ado.net -> driver -> provider(СУБД) -> БД 
     <footer id="Footer" style="background-color: #0E0E0E; z-index:0;">
         <img src="~/Content/images/logo.png" id="footer-logo" alt="" />
         <p id="footer-text-logo" style="color:white; font-style:normal;">TravelWay corporation. All rights reserved</p>
