@@ -50,125 +50,128 @@ namespace TravelWay.Controllers
         public string GetAiroportCode(string city)
         {
             city = city.ToLower();
-            string resualt = city.ToUpper();
+            string result = city.ToUpper();
             switch (city)
             {
                 case "астана":
-                    resualt = "TSE";
+                    result = "TSE";
                     break;
                 case "нур-султан":
-                    resualt = "TSE";
+                    result = "TSE";
                     break;
                 case "алматы":
-                    resualt = "ALA";
+                    result = "ALA";
+                    break;
+                case "алмата":
+                    result = "ALA";
                     break;
                 case "санкт-петербург":
-                    resualt = "LED";
+                    result = "LED";
                     break;
                 case "краснодар":
-                    resualt = "KRR";
+                    result = "KRR";
                     break;
                 case "актау":
-                    resualt = "SCO";
+                    result = "SCO";
                     break;
                 case "актюбинск":
-                    resualt = "AKX";
+                    result = "AKX";
                     break;
                 case "павлодар":
-                    resualt = "PWQ";
+                    result = "PWQ";
                     break;
                 case "москва":
-                    resualt = "MOW";
+                    result = "MOW";
                     break;
                 case "челябинск":
-                    resualt = "CEK";
+                    result = "CEK";
                     break;
                 case "париж":
-                    resualt = "PAR";
+                    result = "PAR";
                     break;
                 case "караганда":
-                    resualt = "KGF";
+                    result = "KGF";
                     break;
                 case "усть-каменогорск":
-                    resualt = "UKK";
+                    result = "UKK";
                     break;
                 case "токио":
-                    resualt = "TYO";
+                    result = "TYO";
                     break;
                 case "нью-йорк":
-                    resualt = "NYC";
+                    result = "NYC";
                     break;
                 case "лондон":
-                    resualt = "LON";
+                    result = "LON";
                     break;
                 case "костанай":
-                    resualt = "KSN";
+                    result = "KSN";
                     break;
                 case "петропавловск":
-                    resualt = "PPK";
+                    result = "PPK";
                     break;
                 case "воронеж":
-                    resualt = "VOZ";
+                    result = "VOZ";
                     break;
                 case "экибастуз":
-                    resualt = "EKB";
+                    result = "EKB";
                     break;
                 case "екатеринбург":
-                    resualt = "SVX";
+                    result = "SVX";
                     break;
                 case "лос-анджелес":
-                    resualt = "LAX";
+                    result = "LAX";
                     break;
                 case "кокшетау":
-                    resualt = "KOV";
+                    result = "KOV";
                     break;
                 case "шымкент":
-                    resualt = "CIT";
+                    result = "CIT";
                     break;
                 case "семипалатинск":
-                    resualt = "PLX";
+                    result = "PLX";
                     break;
                 case "сочи":
-                    resualt = "AER";
+                    result = "AER";
                     break;
                 case "нижний новгород":
-                    resualt = "GOJ";
+                    result = "GOJ";
                     break;
                 case "калининград":
-                    resualt = "KGD";
+                    result = "KGD";
                     break;
                 case "красноярск":
-                    resualt = "KJA";
+                    result = "KJA";
                     break;
                 case "самара":
-                    resualt = "KUF";
+                    result = "KUF";
                     break;
                 case "киев":
-                    resualt = "IEV";
+                    result = "IEV";
                     break;
                 case "пекин":
-                    resualt = "BJS";
+                    result = "BJS";
                     break;
                 case "шанхай":
-                    resualt = "SHA";
+                    result = "SHA";
                     break;
                 case "рио-де-жанейро":
-                    resualt = "RIO";
+                    result = "RIO";
                     break;
                 case "анталья":
-                    resualt = "AYT";
+                    result = "AYT";
                     break;
                 case "анталия":
-                    resualt = "AYT";
+                    result = "AYT";
                     break;
                 case "дубай":
-                    resualt = "DXB";
+                    result = "DXB";
                     break;
                 case "дубаи":
-                    resualt = "DXB";
+                    result = "DXB";
                     break;
             }
-            return resualt;
+            return result;
         }
     }
 }
