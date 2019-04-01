@@ -41,7 +41,8 @@ namespace TravelWay.Controllers
                 ViewBag.Tickets = ticketsParser.GetTickets();
 
                 ViewBag.Searcher = searcher;
-                ViewBag.isFound = ViewBag.Tickets is null ? true : false; 
+                ViewBag.isFound = ViewBag.Tickets.Count == 0 ? false : true;
+                ViewBag.Date = $"{searcherOriginal.DepartureDate.Day}.{searcherOriginal.DepartureDate.Month}.{searcherOriginal.DepartureDate.Year}";
                 return View();
             }
         }

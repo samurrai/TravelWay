@@ -17,7 +17,7 @@
         <fieldset id="routes-fieldset">
             <label><b><a href="/Home/Index">На главную. ||</a></b> Город отправления: <b>@ViewBag.SearcherOriginal.From</b> || Город прибытия: <b>@ViewBag.SearcherOriginal.To</b></label>
             <br />
-            <label>Дата отправки: <b>@ViewBag.SearcherOriginal.DepartureDate.Date</b></label>
+            <label>Дата отправки: <b>@ViewBag.Date</b></label>
         </fieldset>
     </header>
     <div style="height:100px;"></div>
@@ -39,9 +39,11 @@
             foreach (var ticket in ViewBag.Tickets)
             {
                 <div class="WayInfo">
-                    <p> Из @ViewBag.SearcherOriginal.From В @ViewBag.SearcherOriginal.To 
-                           @ViewBag.Tickets.Cost @ViewBag.Tickets.AirCompany 
-                           @ViewBag.Tickets.StartTime <a href="@ViewBag.Tickets.Url">источник</a>></p>
+                    <p>
+                        Из @ViewBag.SearcherOriginal.From В @ViewBag.SearcherOriginal.To
+                        @ticket.Cost @ticket.AirCompany
+                        @ticket.Time <a href="@ticket.SourceSiteURL">источник</a>>
+                    </p>
                 </div>    
             }
             
