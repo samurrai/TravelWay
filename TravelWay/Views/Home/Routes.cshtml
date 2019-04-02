@@ -7,55 +7,68 @@
 <head>
     <meta charset="utf-8" />
     <title>Travel Way</title>
+    <link href='@Url.Content("~/Content/bootstrap.min.css")' rel="stylesheet" type="text/css" />
+    <script src='@Url.Content("~/Scripts/bootstrap.min.js")'></script>
+    <link href="~/Content/Routes.css" media="all" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="~/Content/images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="~/Content/Routes.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header id="routes-header">
-        <a href="/Home/Index"><img src="~/Content/images/logo.png" id="logo-routes" /></a>
-        <fieldset id="routes-fieldset">
-            <label><b><a href="/Home/Index">На главную. ||</a></b> Город отправления: <b>@ViewBag.SearcherOriginal.From</b> || Город прибытия: <b>@ViewBag.SearcherOriginal.To</b></label>
-            <br />
-            <label>Дата отправки: <b>@ViewBag.Date</b></label>
-        </fieldset>
-    </header>
-    <div style="height:100px;"></div>
-    <content>
-
-        <br />
-        @if (!ViewBag.isFound)
-        {
-            <h3>Маршруты по Вашему запросу не найдены!</h3>
-            // 
-            for (int i = 0; i < 30; i++)
-            {
+    <wrapper class="wrapper">
+        <header id="routes-header">
+            <a href="/Home/Index"><img src="~/Content/images/logo.png" id="logo-routes" /></a>
+            <fieldset id="routes-fieldset">
+                <label><b><a href="/Home/Index">На главную. ||</a></b> Город отправления: <b>@ViewBag.SearcherOriginal.From</b> || Город прибытия: <b>@ViewBag.SearcherOriginal.To</b></label>
                 <br />
-            }
-        }
-        else
-        {
-            // cost URL StartTime  AirCompany 
-            foreach (var ticket in ViewBag.Tickets)
+                <label>Дата отправки: <b>@ViewBag.Date</b></label>
+            </fieldset>
+        </header>
+        <div style="height:100px;"></div>
+        <content>
+
+            <br />
+            @if (!ViewBag.isFound)
             {
-                <div class="WayInfo">
-                    <p>
-                        Из @ViewBag.SearcherOriginal.From В @ViewBag.SearcherOriginal.To
-                        @ticket.Cost @ticket.AirCompany
-                        @ticket.Time <a href="@ticket.SourceSiteURL">источник</a>>
-                    </p>
-                </div>    
+                <h3>Маршруты по Вашему запросу не найдены!</h3>
+                //
+                for (int i = 0; i < 30; i++)
+                {
+                    <br />
+                }
             }
-            
-        }
+            else
+            {
+                foreach (var ticket in ViewBag.Tickets)
+                {
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
 
 
+                    <div class="WayInfo text-center align-content-center">
+                        <p>
+                            Из @ViewBag.SearcherOriginal.From В @ViewBag.SearcherOriginal.To
+                            @ticket.Cost @ticket.AirCompany
+                            @ticket.Time <a href="@ticket.SourceSiteURL">источник</a>
+                        </p>
+                    </div>
+                }
 
-    </content>
-   
-    <footer id="Footer" style="background-color: #0E0E0E; z-index:0;">
-        <img src="~/Content/images/logo.png" id="footer-logo" alt="" />
-        <p id="footer-text-logo" style="color:white; font-style:normal;">TravelWay corporation. All rights reserved</p>
+            }
+
+        </content>
+    </wrapper>
+    <footer class="footer">
+        <div class="navbar-inner">
+            <img src="~/Content/images/logo.png" id="footer-logo" alt="" />
+            <p id="footer-text-logo">TravelWay corporation. All rights reserved</p>
+        </div>
     </footer>
 </body>
 </html>
