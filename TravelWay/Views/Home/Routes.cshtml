@@ -41,34 +41,42 @@
             {
                 foreach (var ticket in ViewBag.Tickets)
                 {
-                    <div class="container">
+                    <div class="container m-auto" >
                         <div class="row">
-                            <div class="col">
-                                
+                            <div class="col-2" style="border: 1px solid; ">
+                                <h5>@ticket.AirCompany</h5>
                             </div>
+                            <div class="col-8 " style="border: 1px solid ; ">
+
+                                <div class="row m-1">
+
+                                    <div class="col-3 " style="border: 1px solid ; ">
+                                        <h6>@ViewBag.SearcherOriginal.From</h6>
+                                    </div>
+                                    <div class="col-6 " style="border: 1px solid ; ">
+                                        <h6>Цена: @ticket.Cost тг</h6>
+                                        <h6>Время вылета: @ticket.Time </h6>
+                                    </div>
+                                    <div class="col-3 " style="border: 1px solid ; ">
+                                        <h6>@ViewBag.SearcherOriginal.To</h6>
+                                    </div>
+
+                                </div>
                             
+                            </div>
+                            <div class="col-2 " style="border: 1px solid; ">
+                                <a href="@ticket.SourceSiteURL" style="color:grey">Источник</a>
+                            </div>
                         </div>
                     </div>
-
-
-                    <div class="WayInfo text-center align-content-center">
-                        <p>
-                            Из @ViewBag.SearcherOriginal.From В @ViewBag.SearcherOriginal.To
-                            @ticket.Cost @ticket.AirCompany
-                            @ticket.Time <a href="@ticket.SourceSiteURL">источник</a>
-                        </p>
-                    </div>
+                    <div style="height: 10px;"/>
+ 
                 }
 
             }
 
         </content>
     </wrapper>
-    <footer class="footer">
-        <div class="navbar-inner">
-            <img src="~/Content/images/logo.png" id="footer-logo" alt="" />
-            <p id="footer-text-logo">TravelWay corporation. All rights reserved</p>
-        </div>
-    </footer>
+     
 </body>
 </html>
